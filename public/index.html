@@ -2,22 +2,61 @@
 <html>
   <head>
     <title>CSS/HTML Workshop with Privateaser</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   </head>
   <body>
-    <div id="bar">
-      <input class="name" type="text" placeholder="Bar name"/>
-      <input class="price-by-hour" type="number" placeholder="Price by hour"/>
-      <input class="price-by-person" type="number" placeholder="Price by person"/>
-    </div>
-    <div id="booker">
-      <input class="name" type="text" placeholder="Booker name"/>
-      <input class="time" type="number" placeholder="Time in h"/>
-      <input class="persons" type="number" placeholder="Persons"/>
-      <input class="option" type="checkbox" placeholder="Deductible option"/>
-    </div>
-    <button id="compute">Compute</button>
-    <div id="actors"></div>
+  	<div class="container view view-cascade py-3 gradient-card-header info-color-dark">
+		    <div id="bar" class="form-row">
+		    	<div class="col-md-4 mb-3">
+			      <label for="validationDefault01">Bar name</label>
+			      <br>
+			      <input class="name form-control" type="text" placeholder="Bar name" id="validationDefault01" required>
+		    	</div>
+		    	<div class="col-md-4 mb-3">
+			      <label for="validationDefault02">Price By Hour</label>
+			      <br>
+			      <input type="number" class="price-by-hour form-control" id="validationDefault02" placeholder="Price by hour" value="Otto" required>
+		    	</div>
+		    	<div class="col-md-4 mb-3">
+		      		<label for="validationDefaultUsername">Price Per Person</label>
+		      		<br>
+			      <div class="input-group">
+			        <div class="input-group-prepend">
+			          <span class="input-group-text" id="inputGroupPrepend2">@</span>
+			        </div>
+			        <input type="number" class="price-by-person form-control" id="validationDefaultUsername" placeholder="Price by person" aria-describedby="inputGroupPrepend2" required>
+			      </div>
+		    	</div>
+		    </div>
+		    <div class="form-row" id="booker">
+			    <div class="col-md-5 mb-3">
+			      <label for="validationDefault03">Booker Name</label>
+			      <br>
+			      <input type="text" class="name form-control" id="validationDefault03" placeholder="Booker name" required>
+			    </div>
+			    <div class="col-md-3 mb-3">
+			      <label for="validationDefault04">Time in H</label>
+			      <br>
+			      <input type="number" class="time form-control" id="validationDefault04" placeholder="Time in h" required>
+			    </div>
+			    <div class="col-md-3 mb-3">
+			      <label for="validationDefault05">Person</label>
+			      <br>
+			      <input type="number" class="persons form-control" id="validationDefault05" placeholder="Persons" required>
+			    </div>
+			    <div class="col-md-1 mb-1">
+			    	<label>Option Déductible</label>
+			    	<br>
+			    	<input class="option label-primary" type="checkbox" placeholder="Deductible option"/>
+				</div>
+		  	</div>
+		    <button id="compute" class="btn btn-primary">Compute</button>
+		    <div id="actors"></div>
+	</div>
     <script src="privateaser.js"></script>
     <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
   </body>
 </html>
